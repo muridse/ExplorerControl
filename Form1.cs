@@ -59,7 +59,7 @@ namespace ExplorerControll
                 if ((Keyboard.GetKeyStates(Key.LeftAlt) & KeyStates.Down) > 0
                     && (Keyboard.GetKeyStates(Key.Down) & KeyStates.Down) > 0)
                 {
-                    for (int i = 0; i < 5; i++) //don't know, magic trick
+                    for (int i = 0; i < 10; i++) //don't know, magic trick
                     {
                         Process[] appInstances = Process.GetProcessesByName("explorer");
                         foreach (Process p in appInstances)
