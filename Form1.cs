@@ -22,6 +22,13 @@ namespace ExplorerControll
 
         protected override void OnLoad(System.EventArgs e)
         {
+            MessageBox.Show(String.Format(
+                $"Alt + Arrow Up - Start Explorer \n" +
+                $"Alt + Arrow Down - Close Explorer \n" +
+                $"Alt + Arrow Up - Kill this programm from background \n"
+                ),
+                "Explorer Control FAQ");
+
 
             Thread TH = new Thread(KeyboardCheck);
             TH.SetApartmentState(ApartmentState.STA);
@@ -29,6 +36,8 @@ namespace ExplorerControll
             TH.Start();
             if (TH.IsAlive)
                 this.BeginInvoke(new MethodInvoker(Close));
+
+            
         }
         bool isRunning = true;
         private void KeyboardCheck()
@@ -36,29 +45,37 @@ namespace ExplorerControll
             while (isRunning)
             {
                 Thread.Sleep(40);
+                //hotkey for open Explorer
                 if ((Keyboard.GetKeyStates(Key.LeftAlt) & KeyStates.Down) > 0
                     && (Keyboard.GetKeyStates(Key.Up) & KeyStates.Down) > 0)
                 {
-                    Process.Start("Notepad");
+                    Process[] appInstances = Process.GetProcessesByName("Explorer");
+                    if(appInstances.Length < 1)
+                        System.Diagnostics.Process.Start(@"C:\Windows\explorer.exe");
+
                 }
 
-
+                //hotkey for close Explorer
                 if ((Keyboard.GetKeyStates(Key.LeftAlt) & KeyStates.Down) > 0
                     && (Keyboard.GetKeyStates(Key.Down) & KeyStates.Down) > 0)
                 {
-                    Process[] appInstances = Process.GetProcessesByName("Notepad");
-                    foreach (Process p in appInstances)
+                    for (int i = 0; i < 5; i++) //don't know, magic trick
                     {
-                        try
+                        Process[] appInstances = Process.GetProcessesByName("explorer");
+                        foreach (Process p in appInstances)
                         {
-                            p.Kill();
-                        }
-                        catch (Exception)
-                        {
+                            try
+                            {
+                                p.Kill();
+                            }
+                            catch (Exception)
+                            {
+                            }
                         }
                     }
                 }
                 
+                //hotkey for close app
                 if ((Keyboard.GetKeyStates(Key.LeftAlt) & KeyStates.Down) > 0
                         && (Keyboard.GetKeyStates(Key.Escape) & KeyStates.Down) > 0)
                 {
