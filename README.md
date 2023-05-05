@@ -4,7 +4,7 @@ Explorer Control is a utility for quickly closing the Explorer.exe process using
 
 Utility view:
 
-![image](https://user-images.githubusercontent.com/26198117/236197027-1f5f858c-b6ef-4143-ab32-4fc837580ef5.png)
+![image](https://user-images.githubusercontent.com/26198117/236423999-a4ead05b-5857-4196-ae09-606fbbb654b0.png)
 
 
 ## FAQ
