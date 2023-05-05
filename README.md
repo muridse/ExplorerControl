@@ -25,7 +25,7 @@ Launched Xbox games may crash after 10-30 minutes of operation. Disabling Explor
 ## License
 
 <p>
-    <a href="https://github.com/tailwindlabs/heroicons/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/heroicons.svg" alt="License"></a>
+    <a href="https://mit-license.org/"><img src="https://img.shields.io/npm/l/heroicons.svg" alt="License"></a>
 </p>
 
 Copyright (c) 2023 MELDv2 Inc
