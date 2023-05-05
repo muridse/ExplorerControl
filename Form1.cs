@@ -25,7 +25,7 @@ namespace ExplorerControll
             MessageBox.Show(String.Format(
                 $"Alt + Arrow Up - Start Explorer \n" +
                 $"Alt + Arrow Down - Close Explorer \n" +
-                $"Alt + Arrow Escape - Kill this program from background \n"
+                $"Alt + Escape - Kill this program from background \n"
                 ),
                 "Explorer Control FAQ");
 
