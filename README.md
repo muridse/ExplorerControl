@@ -13,7 +13,7 @@ The program runs in the background, when you start you will see hints in the man
 
 ### Alt +Arrow Up -Start Explorer
 ### Alt + Arrow Down - Close Explorer
-### Alt + Arrow Escape - Kill this program from background
+### Alt + Escape - Kill this program from background
 
 
 
