@@ -19,7 +19,7 @@ The program runs in the background, when you start you will see hints in the man
 
 
 ## Creation Motivation:
-Launched Xbox games may crash after 10-30 minutes of operation. Disabling Explorer.exe while the game is running solves this problem.
+Xbox games crash FIX. Launched Xbox games may crash after 10-30 minutes of operation. Disabling Explorer.exe while the game is running solves this problem.
 
 
 ## License
